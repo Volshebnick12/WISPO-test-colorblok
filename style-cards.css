@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat-Medium.eot');
+    src: local('☺'), url('./fonts/Montserrat-Medium.woff') format('woff'), url('./fonts/Montserrat-Medium.ttf') format('truetype'), url('./fonts/Montserrat-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px;
+    align-items: flex-start;
+    justify-content: start;
+    max-height: 100vh;
+    flex-direction: column;
+}
+
+.case1,
+.case2,
+.case3 {
+    border-radius: 20px;
+    padding: 2%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    margin-bottom: 40px;
+}
+
+.case1 {
+    border: 1px solid #FFA300;
+    max-width: 61%;
+}
+
+.case2 {
+    border: 1px solid #9A9A9A;
+    order: 3;
+    max-width: 36%;
+    margin-left: 30px;
+}
+
+.case3 {
+    border: 1px solid #000000;
+    max-width: 61%;
+    order: 2;
+}
+
+@media (max-width:1200px), (max-height:900px) {
+    .wrapper {
+        max-height: auto;
+        flex-wrap: nowrap;
+    }
+
+    .case1,
+    .case2,
+    .case3 {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width:375px)  {
+    
+    .case1,
+    .case2,
+    .case3 {
+        font-size: 14px;
+        padding: 5%;
+    }
+}
